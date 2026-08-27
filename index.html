@@ -13,7 +13,7 @@
 @media(max-width:560px){.shell{width:min(100% - 24px,1180px)}.top .shell{justify-content:center}.top span{display:none}.nav{min-height:72px}.links{top:72px}.brand img{width:155px;height:62px}.hero{padding-top:48px}.hero h1{font-size:52px}.heroPhoto img,.photoCard img,.craftPhoto img,.specialPhoto img,.tile img{height:500px}.services,.process{grid-template-columns:1fr}.trust{gap:18px}.section{padding:72px 0}footer .shell{display:block;text-align:center}.wa{right:12px;bottom:12px}}
 </style>
 <style>
-.top .shell{min-height:42px}.topContact{display:grid;justify-items:end;gap:1px;line-height:1.35}.topContact span{color:#cfc4b3;font-size:11px}.stat{width:154px;height:auto;border:0;background:none;margin-top:24px}.stat strong{display:none}.stat img{width:154px;height:154px}.stat span{margin-top:9px;color:var(--muted)}
+.top .shell{min-height:42px}.top .shell>span:first-child{font-size:14px;font-weight:600;line-height:1.35}.topContact{display:grid;justify-items:end;gap:1px;line-height:1.35}.topContact span{color:#cfc4b3;font-size:11px}.photoCard img{height:auto;object-fit:contain;background:#f2e6d1}.stat{width:154px;height:auto;border:0;background:none;margin-top:24px}.stat strong{display:none}.stat img{width:154px;height:154px}.stat span{margin-top:9px;color:var(--muted)}
 @media(max-width:560px){.top .shell{justify-content:center}.top .shell>span:first-child{display:none}.topContact{justify-items:center}.topContact span{display:block}}
 </style>
 </head>
@@ -38,6 +38,7 @@ function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[
 document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));setLang(localStorage.getItem('rushida-lang')||'en');
 document.querySelector('.menu').onclick=()=>document.querySelector('#links').classList.toggle('open');
 document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>document.querySelector('#links').classList.remove('open'));
+document.querySelector('.notice')?.remove();
 const contactEmailPlaceholder='Email: to be added'; // Replace this value when the business email is confirmed.
 const topContact=document.querySelector('.top .shell');
 const phoneLink=topContact.lastElementChild;
