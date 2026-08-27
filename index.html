@@ -12,6 +12,10 @@
 @media(max-width:900px){.nav{grid-template-columns:1fr auto}.brand img{width:180px}.links{display:none;position:absolute;top:82px;left:0;right:0;background:var(--ivory);padding:24px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.cta{display:none}.menu{display:block;border:0;background:none;font-size:24px}.heroGrid,.grid2,.contactGrid{grid-template-columns:1fr}.heroPhoto img{height:600px}.services,.process{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.tile img{height:600px}}
 @media(max-width:560px){.shell{width:min(100% - 24px,1180px)}.top .shell{justify-content:center}.top span{display:none}.nav{min-height:72px}.links{top:72px}.brand img{width:155px;height:62px}.hero{padding-top:48px}.hero h1{font-size:52px}.heroPhoto img,.photoCard img,.craftPhoto img,.specialPhoto img,.tile img{height:500px}.services,.process{grid-template-columns:1fr}.trust{gap:18px}.section{padding:72px 0}footer .shell{display:block;text-align:center}.wa{right:12px;bottom:12px}}
 </style>
+<style>
+.top .shell{min-height:42px}.topContact{display:grid;justify-items:end;gap:1px;line-height:1.35}.topContact span{color:#cfc4b3;font-size:11px}.stat{width:154px;height:auto;border:0;background:none;margin-top:24px}.stat strong{display:none}.stat img{width:154px;height:154px}.stat span{margin-top:9px;color:var(--muted)}
+@media(max-width:560px){.top .shell{justify-content:center}.top .shell>span:first-child{display:none}.topContact{justify-items:center}.topContact span{display:block}}
+</style>
 </head>
 <body>
 <div class="top"><div class="shell"><span data-en="Bespoke dressmaking & alterations · Bonteheuwel, Cape Town · By appointment" data-af="Pasgemaakte kleremakery & verstellings · Bonteheuwel, Kaapstad · Per afspraak">Bespoke dressmaking & alterations · Bonteheuwel, Cape Town · By appointment</span><a href="tel:+27714508227">071 450 8227</a></div></div>
@@ -34,6 +38,16 @@ function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[
 document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));setLang(localStorage.getItem('rushida-lang')||'en');
 document.querySelector('.menu').onclick=()=>document.querySelector('#links').classList.toggle('open');
 document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>document.querySelector('#links').classList.remove('open'));
+const contactEmailPlaceholder='Email: to be added'; // Replace this value when the business email is confirmed.
+const topContact=document.querySelector('.top .shell');
+const phoneLink=topContact.lastElementChild;
+phoneLink.innerHTML='&#9742; 071 450 8227';
+const contactBlock=document.createElement('div');
+contactBlock.className='topContact';
+phoneLink.before(contactBlock);
+contactBlock.append(phoneLink);
+contactBlock.insertAdjacentHTML('beforeend','<span>&#9993; '+contactEmailPlaceholder+'</span>');
+document.querySelector('.stat').insertAdjacentHTML('afterbegin','<img src="10-30-years-of-craft.svg" alt="" aria-hidden="true">');
 document.querySelector('#year').textContent=new Date().getFullYear();
 </script>
 </body></html>

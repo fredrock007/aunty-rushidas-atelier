@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">30 plus years of craft</title>
+  <desc id="desc">A refined black, ivory, and gold atelier experience emblem.</desc>
+  <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2db9c"/><stop offset=".48" stop-color="#bd8c42"/><stop offset="1" stop-color="#f2db9c"/></linearGradient></defs>
+  <circle cx="160" cy="160" r="151" fill="#11100e"/><circle cx="160" cy="160" r="142" fill="none" stroke="url(#gold)" stroke-width="3"/><circle cx="160" cy="160" r="129" fill="none" stroke="#f8f1e5" stroke-width="1" stroke-dasharray="2 8"/>
+  <path d="M81 160h35M204 160h35M160 81v25M160 214v25" stroke="url(#gold)" stroke-width="2"/><text x="160" y="174" fill="#f8f1e5" font-family="Georgia, serif" font-size="92" font-weight="bold" text-anchor="middle">30+</text><path d="M99 199h122" stroke="url(#gold)" stroke-width="2"/><text x="160" y="222" fill="#e8cf92" font-family="Arial, sans-serif" font-size="13" font-weight="bold" letter-spacing="4" text-anchor="middle">ATELIER CRAFT</text>
+</svg>
