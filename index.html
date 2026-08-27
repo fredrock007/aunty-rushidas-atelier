@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Aunty Rushida's Atelier — bespoke dressmaking, occasionwear and alterations in Bonteheuwel, Cape Town.">
+<meta name="description" content="Aunty Rushida's Atelier — bespoke dressmaking, occasionwear and alterations on Bluegum Street, Bonteheuwel, Cape Town.">
 <meta name="theme-color" content="#11100e">
 <title>Aunty Rushida's Atelier | Cape Town Dressmaker</title>
 <style>
@@ -34,7 +34,7 @@
 <footer><div class="shell"><span>© <span id="year"></span> Aunty Rushida's Atelier</span><span data-en="Bonteheuwel, Cape Town · Exact home address kept private online · By appointment" data-af="Bonteheuwel, Kaapstad · Presiese huisadres word nie aanlyn gepubliseer nie · Per afspraak">Bonteheuwel, Cape Town · Exact home address kept private online · By appointment</span></div></footer>
 <a class="wa" href="https://wa.me/27714508227">WhatsApp · 071 450 8227</a>
 <script>
-function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(e=>{e.textContent=e.dataset[l]||e.dataset.en});document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));localStorage.setItem('rushida-lang',l)}
+function setLang(l){const oldLocation=l==='af'?'Bonteheuwel, Kaapstad':'Bonteheuwel, Cape Town';const newLocation=l==='af'?'Bluegumstraat, Bonteheuwel, Kaapstad':'Bluegum Street, Bonteheuwel, Cape Town';document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(e=>{e.textContent=(e.dataset[l]||e.dataset.en).replaceAll(oldLocation,newLocation)});document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));localStorage.setItem('rushida-lang',l)}
 document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));setLang(localStorage.getItem('rushida-lang')||'en');
 document.querySelector('.menu').onclick=()=>document.querySelector('#links').classList.toggle('open');
 document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>document.querySelector('#links').classList.remove('open'));
